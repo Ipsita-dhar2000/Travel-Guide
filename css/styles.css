@@ -189,79 +189,164 @@ section .navigation li img:hover{
   width: 200px;
 }
 
-  .login-form-container{
-   position: fixed;
-   top: -120%;
-   left: 0;
-   z-index: 10000;
-   min-height: 100vh;
-   width: 100%;
-   background: rgba(0,0,0,.7);
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
- .login-form-container.active{
-   top: 0;
- }
- .login-form-container form{
-   margin: 2rem;
-   padding: 1.5rem 2rem;
-   border-radius: .5rem;
-   background: #fff;
-   width: 50rem;
- }
-.login-form-container form h3{
-  font-size: 3rem;
-  color: #444;
-  text-transform: uppercase;
+
+.login-form-container{
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* padding-left: 37rem;
+  padding-top: 80rem; */
+}
+.login-form-container.active{
+  top: 0;
+}
+
+.container #form-close{
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  color: orange;
+  cursor: pointer;
+  margin-bottom: 50rem;
+  margin-left: 3rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  background: transparent;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  width: 400px;
+  height: 500px;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+  perspective: 1000px;
+}
+
+.inner-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background: #fff;
+  padding: 55px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+.card-back{
+  transform: rotateY(180deg);  
+}
+
+.card h2{
+  font-weight: normal;
+  font-size: 25px;
   text-align: center;
-  padding: 1rem 0;
+  margin-bottom: 20px; 
 }
-.login-form-container form .box{
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.7rem;
-  color: #333;
-  margin: .6rem 0;
-  border: .1rem solid rgba(0,0,0,.3);
-  text-transform: none;
 
+.input-box{
+  width:100%;
+  background: transparent;
+  border: 1px solid #000000;
+  margin: 6px 0;
+  height: 30px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  color: #000000;
 }
-.login-form-container form .box:focus{
-  border-color: var(--orange);
+
+::placeholder{
+  color:#000000;
+  font-size: 12px;
 }
-.login-form-container form #remember{
-  margin: 2rem 0;
+
+button{
+  width: 100%;
+  background: transparent;
+  border:1px solid #000000;
+  margin: 35px 0 10px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  color: #000000;
+  cursor: pointer;
 }
-.login-form-container form label{
-  font-size: 1.5rem;
+
+.submit-btn{
+  position: relative;
+  border-radius: 20px;
+  font-size: 14px;
 }
-.login-form-container form .btn{
+
+.submit-btn::after{
+  content: '\27a4';
+  color: #fff;
+  line-height: 32px;
+  font-size: 17px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: #000000;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+}
+
+.rememberme{
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.card .btn{
+  margin-top: 70px;
+  border-color: #000000;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.card a{
+  color: #000000;
+  text-decoration: none;
   display: block;
-  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 8px;
+}
 
-}
-.login-form-container form p{
-  padding: .5rem 0;
-  font-size: 1.5rem;
-  color: #666;
-}
-.login-form-container form p a{
-  color: var(--orange);
-}
-.login-form-container form p a:hover{
-  color: #333;
-  text-decoration: underline;
-}
- .login-form-container #form-close{
-   position: absolute;
-   top: 2rem;
-   right: 3rem;
-   font-size: #fff;
-   color: #fff;
-   cursor: pointer;
- }
  
  
  
