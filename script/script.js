@@ -3,6 +3,7 @@ let searchBar = document.querySelector('.search-bar-container');
 let formBtn = document.querySelector('#login-btn');
 let loginForm = document.querySelector('.login-form-container');
 let formClose = document.querySelector('#form-close');
+var card = document.getElementById("card");
 
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
@@ -26,3 +27,12 @@ formClose.addEventListener('click', () =>{
     loginForm.classList.remove('active');
     
 });
+
+
+function openRegister(){
+    card.style.transform = "rotateY(-180deg)";
+}
+
+function openLogin(){
+    card.style.transform = "rotateY(0deg)";
+}
